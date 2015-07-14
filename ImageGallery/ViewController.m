@@ -31,8 +31,8 @@
 
 -(void)createImageViews {
     UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.screenSize.width, self.screenSize.height)];
-    UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(100, 0, 100, 100)];
-    UIImageView *imageView3 = [[UIImageView alloc]initWithFrame:CGRectMake(200, 0, 100, 100)];
+    UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake((self.screenSize.width), 0,self.screenSize.width, self.screenSize.height)];
+    UIImageView *imageView3 = [[UIImageView alloc]initWithFrame:CGRectMake((self.screenSize.width*2), 0,self.screenSize.width, self.screenSize.height)];
     
     imageView1.backgroundColor = [UIColor redColor];
     imageView2.backgroundColor = [UIColor blueColor];
