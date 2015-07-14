@@ -14,26 +14,25 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOP-5G-cd7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-in-Field" translatesAutoresizingMaskIntoConstraints="NO" id="Yhs-HY-hfd" userLabel="Red">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="600" id="K1h-eC-8nd"/>
                                             <constraint firstAttribute="width" constant="600" id="Y6R-Em-cdH"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-night" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-61-gPQ" userLabel="Blue">
-                                        <rect key="frame" x="600" y="0.0" width="600" height="600"/>
+                                        <rect key="frame" x="600" y="0.0" width="600" height="536"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-zoomed" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-gS-nru" userLabel="Green">
-                                        <rect key="frame" x="1200" y="0.0" width="600" height="600"/>
+                                        <rect key="frame" x="1200" y="0.0" width="600" height="536"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                 </subviews>
@@ -58,7 +57,7 @@
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mi5-Fa-nbm">
-                                <rect key="frame" x="8" y="543" width="584" height="37"/>
+                                <rect key="frame" x="8" y="479" width="584" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="l6k-cM-Qqp"/>
                                 </constraints>
@@ -72,14 +71,15 @@
                             <constraint firstItem="mi5-Fa-nbm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-8" id="Bgc-oc-P2I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mi5-Fa-nbm" secondAttribute="trailing" constant="-8" id="JGe-94-9dy"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XOP-5G-cd7" secondAttribute="bottom" id="Mgu-E9-kzG"/>
-                            <constraint firstItem="XOP-5G-cd7" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Ru3-cZ-NN9"/>
+                            <constraint firstAttribute="height" secondItem="Yhs-HY-hfd" secondAttribute="height" id="P4h-2M-b2e"/>
+                            <constraint firstItem="XOP-5G-cd7" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Ru3-cZ-NN9"/>
                             <constraint firstItem="XOP-5G-cd7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ufv-m8-9UI"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="Sew-6T-DwF"/>
                     <connections>
                         <outlet property="pageControl" destination="mi5-Fa-nbm" id="UmF-Wf-VLf"/>
-                        <outlet property="redHeight" destination="K1h-eC-8nd" id="VNt-gO-keT"/>
                         <outlet property="redWidth" destination="Y6R-Em-cdH" id="TOh-aO-pmv"/>
                         <outlet property="scrollView" destination="XOP-5G-cd7" id="Xmv-9V-QlJ"/>
                         <segue destination="YPr-a7-NIS" kind="show" identifier="DetailViewController" id="4Ud-mS-qj1"/>
@@ -104,7 +104,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4gG-O1-lNd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dj2-2B-cxf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ii-eR-qIu">
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0u-Fy-twX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2504" y="305"/>
+            <point key="canvasLocation" x="2692" y="291"/>
         </scene>
         <!--View Controller Next-->
         <scene sceneID="puj-bc-4uW">
@@ -179,7 +179,8 @@
         <!--Navigation Controller-->
         <scene sceneID="qMR-ZG-dVG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OGW-FV-GgK" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcJ-Rn-0Qs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="OGW-FV-GgK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YtH-jo-4rb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -190,7 +191,6 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="OWe-Zd-wmV"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rcJ-Rn-0Qs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1058" y="305"/>
         </scene>

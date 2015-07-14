@@ -21,10 +21,15 @@
     [super viewDidLoad];
     self.scrollViewSize = self.view.frame.size;
     self.redWidth.constant = self.scrollViewSize.width;
-    self.redHeight.constant = self.scrollViewSize.height;
+//    self.redHeight.constant = self.scrollViewSize.height;
     //scrollView is not resizing for some reason so i set self.scrollViewSize to self.view.frame.size
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"Scroll view frame: %@", NSStringFromCGRect(self.scrollView.frame));
+    NSLog(@"Scroll view content size: %@", NSStringFromCGSize(self.scrollView.contentSize));
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
