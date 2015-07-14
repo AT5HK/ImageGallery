@@ -14,14 +14,6 @@
 
 @implementation ViewController
 
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +29,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - helper methods
+
 
 
 
