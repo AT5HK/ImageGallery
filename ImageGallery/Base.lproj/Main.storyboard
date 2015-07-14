@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gq4-ji-fdn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -72,6 +72,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller Next-->
+        <scene sceneID="puj-bc-4uW">
+            <objects>
+                <viewController id="gq4-ji-fdn" customClass="ViewControllerNext" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UXZ-kH-Lfz"/>
+                        <viewControllerLayoutGuide type="bottom" id="i6B-OO-m8W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Jn-Te-8Ce">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRJ-5I-s79">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-in-Field" translatesAutoresizingMaskIntoConstraints="NO" id="pKt-2T-695">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="pKt-2T-695" secondAttribute="bottom" id="3Hx-gm-pm2"/>
+                                    <constraint firstItem="pKt-2T-695" firstAttribute="top" secondItem="qRJ-5I-s79" secondAttribute="top" id="8jP-43-X5X"/>
+                                    <constraint firstAttribute="centerX" secondItem="pKt-2T-695" secondAttribute="centerX" id="Idj-IC-aLU"/>
+                                    <constraint firstAttribute="trailing" secondItem="pKt-2T-695" secondAttribute="trailing" id="WNl-KU-fnS"/>
+                                    <constraint firstAttribute="centerY" secondItem="pKt-2T-695" secondAttribute="centerY" id="gX6-P4-d7d"/>
+                                    <constraint firstItem="pKt-2T-695" firstAttribute="leading" secondItem="qRJ-5I-s79" secondAttribute="leading" id="uYt-nv-Wuf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="gq4-ji-fdn" id="vdZ-kg-bUR"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qRJ-5I-s79" firstAttribute="top" secondItem="2Jn-Te-8Ce" secondAttribute="top" id="ZqU-DC-8tw"/>
+                            <constraint firstAttribute="trailing" secondItem="qRJ-5I-s79" secondAttribute="trailing" id="cs6-tV-HRW"/>
+                            <constraint firstItem="i6B-OO-m8W" firstAttribute="top" secondItem="qRJ-5I-s79" secondAttribute="bottom" id="ofe-Mt-6S4"/>
+                            <constraint firstItem="qRJ-5I-s79" firstAttribute="leading" secondItem="2Jn-Te-8Ce" secondAttribute="leading" id="pXY-48-x5Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lightView" destination="pKt-2T-695" id="WtD-sg-3Ov"/>
+                        <outlet property="scrollView" destination="qRJ-5I-s79" id="kNu-DP-3hR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tag-TJ-cUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="305"/>
         </scene>
     </scenes>
     <resources>

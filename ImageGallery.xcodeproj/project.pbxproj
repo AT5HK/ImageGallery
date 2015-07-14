@@ -14,6 +14,7 @@
 		504DBDF41B5583E6004187A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504DBDF31B5583E6004187A3 /* Images.xcassets */; };
 		504DBDF71B5583E6004187A3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 504DBDF51B5583E6004187A3 /* LaunchScreen.xib */; };
 		504DBE031B5583E6004187A3 /* ImageGalleryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DBE021B5583E6004187A3 /* ImageGalleryTests.m */; };
+		504DBE0E1B559C67004187A3 /* ViewControllerNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DBE0D1B559C67004187A3 /* ViewControllerNext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		504DBDFC1B5583E6004187A3 /* ImageGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		504DBE011B5583E6004187A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		504DBE021B5583E6004187A3 /* ImageGalleryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryTests.m; sourceTree = "<group>"; };
+		504DBE0C1B559C67004187A3 /* ViewControllerNext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerNext.h; sourceTree = "<group>"; };
+		504DBE0D1B559C67004187A3 /* ViewControllerNext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerNext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				504DBDEB1B5583E6004187A3 /* AppDelegate.m */,
 				504DBDED1B5583E6004187A3 /* ViewController.h */,
 				504DBDEE1B5583E6004187A3 /* ViewController.m */,
+				504DBE0C1B559C67004187A3 /* ViewControllerNext.h */,
+				504DBE0D1B559C67004187A3 /* ViewControllerNext.m */,
 				504DBDF01B5583E6004187A3 /* Main.storyboard */,
 				504DBDF31B5583E6004187A3 /* Images.xcassets */,
 				504DBDF51B5583E6004187A3 /* LaunchScreen.xib */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				504DBDEF1B5583E6004187A3 /* ViewController.m in Sources */,
+				504DBE0E1B559C67004187A3 /* ViewControllerNext.m in Sources */,
 				504DBDEC1B5583E6004187A3 /* AppDelegate.m in Sources */,
 				504DBDE91B5583E6004187A3 /* main.m in Sources */,
 			);
