@@ -19,6 +19,38 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOP-5G-cd7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yhs-HY-hfd" userLabel="Red">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="600" id="K1h-eC-8nd"/>
+                                            <constraint firstAttribute="width" constant="600" id="Y6R-Em-cdH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-61-gPQ" userLabel="Blue">
+                                        <rect key="frame" x="600" y="0.0" width="600" height="600"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-gS-nru" userLabel="Green">
+                                        <rect key="frame" x="1200" y="0.0" width="600" height="600"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Yhs-HY-hfd" firstAttribute="leading" secondItem="XOP-5G-cd7" secondAttribute="leading" id="0sq-3E-9C2"/>
+                                    <constraint firstItem="5Pb-gS-nru" firstAttribute="leading" secondItem="pPe-61-gPQ" secondAttribute="trailing" id="26D-My-5Om"/>
+                                    <constraint firstItem="Yhs-HY-hfd" firstAttribute="height" secondItem="5Pb-gS-nru" secondAttribute="height" id="98i-v4-sp9"/>
+                                    <constraint firstItem="Yhs-HY-hfd" firstAttribute="width" secondItem="5Pb-gS-nru" secondAttribute="width" id="HoJ-aC-cyi"/>
+                                    <constraint firstItem="pPe-61-gPQ" firstAttribute="top" secondItem="XOP-5G-cd7" secondAttribute="top" id="N0S-WH-ocA"/>
+                                    <constraint firstItem="5Pb-gS-nru" firstAttribute="top" secondItem="XOP-5G-cd7" secondAttribute="top" id="NBb-Ay-FDO"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yhs-HY-hfd" secondAttribute="bottom" id="Q1V-VD-kUU"/>
+                                    <constraint firstItem="Yhs-HY-hfd" firstAttribute="top" secondItem="XOP-5G-cd7" secondAttribute="top" id="TVr-hF-OUQ"/>
+                                    <constraint firstItem="pPe-61-gPQ" firstAttribute="leading" secondItem="Yhs-HY-hfd" secondAttribute="trailing" id="UFs-me-weJ"/>
+                                    <constraint firstItem="Yhs-HY-hfd" firstAttribute="width" secondItem="pPe-61-gPQ" secondAttribute="width" id="Wfx-9K-wy5"/>
+                                    <constraint firstItem="Yhs-HY-hfd" firstAttribute="height" secondItem="pPe-61-gPQ" secondAttribute="height" id="Yko-hQ-fXM"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Pb-gS-nru" secondAttribute="trailing" id="epj-ko-ESQ"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="Yo7-Ir-GDu"/>
                                 </connections>
@@ -26,13 +58,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XOP-5G-cd7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="I0r-zL-YdN"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XOP-5G-cd7" secondAttribute="bottom" id="au3-qb-jnQ"/>
-                            <constraint firstItem="XOP-5G-cd7" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ftI-wL-9f1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XOP-5G-cd7" secondAttribute="trailing" constant="-16" id="oHg-8k-st2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XOP-5G-cd7" secondAttribute="trailing" constant="-16" id="0Me-Kn-oTd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XOP-5G-cd7" secondAttribute="bottom" id="Mgu-E9-kzG"/>
+                            <constraint firstItem="XOP-5G-cd7" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Ru3-cZ-NN9"/>
+                            <constraint firstItem="XOP-5G-cd7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ufv-m8-9UI"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="redHeight" destination="K1h-eC-8nd" id="VNt-gO-keT"/>
+                        <outlet property="redWidth" destination="Y6R-Em-cdH" id="TOh-aO-pmv"/>
                         <outlet property="scrollView" destination="XOP-5G-cd7" id="Xmv-9V-QlJ"/>
                     </connections>
                 </viewController>

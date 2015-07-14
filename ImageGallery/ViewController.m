@@ -9,18 +9,28 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (nonatomic) CGSize screenSize;
+@property (nonatomic) CGSize scrollViewSize;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    self.screenSize = self.view.frame.size;
-    [super viewDidLoad];
-//    self.scrollView.translatesAutoresizingMaskIntoConstraints = YES;
-    self.scrollView.contentSize = CGSizeMake((self.view.frame.size.width * 3), 0);
-    [self createImageViews];
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        
+    }
+    return self;
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.scrollViewSize = self.view.frame.size;
+    self.redWidth.constant = self.scrollViewSize.width;
+    self.redHeight.constant = self.scrollViewSize.height;
+    //scrollView is not resizing for some reason so i set self.scrollViewSize to self.view.frame.size
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -29,18 +39,6 @@
 
 #pragma mark - helper methods
 
--(void)createImageViews {
-    UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.screenSize.width, self.screenSize.height)];
-    UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake((self.screenSize.width), 0,self.screenSize.width, self.screenSize.height)];
-    UIImageView *imageView3 = [[UIImageView alloc]initWithFrame:CGRectMake((self.screenSize.width*2), 0,self.screenSize.width, self.screenSize.height)];
-    
-    imageView1.backgroundColor = [UIColor redColor];
-    imageView2.backgroundColor = [UIColor blueColor];
-    imageView3.backgroundColor = [UIColor greenColor];
-    
-    [self.scrollView addSubview:imageView1];
-    [self.scrollView addSubview:imageView2];
-    [self.scrollView addSubview:imageView3];
-}
+
 
 @end
