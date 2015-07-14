@@ -41,7 +41,6 @@
 - (IBAction)showDetailView:(id)sender {
     UITapGestureRecognizer *tap = sender;
     CGPoint point = [tap locationInView:self.scrollView];
-    NSLog(@"df");
     for (UIView *view in self.scrollView.subviews)
     {
         if ([view isKindOfClass:[UIImageView class]] && CGRectContainsPoint(view.frame, point))
@@ -53,7 +52,17 @@
     }
 }
 
-
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView.contentOffset.x < self.view.frame.size.width) {
+        self.pageControl.currentPage = 0;
+    }
+    else if (scrollView.contentOffset.x < self.view.frame.size.width*2) {
+        self.pageControl.currentPage = 1;
+    }
+    else {
+        self.pageControl.currentPage = 2;
+    }
+}
 
 
 @end

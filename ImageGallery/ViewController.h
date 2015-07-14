@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *redHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *redWidth;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 

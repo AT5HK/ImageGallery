@@ -57,10 +57,20 @@
                                     <outletCollection property="gestureRecognizers" destination="Dn1-KC-ZSh" appends="YES" id="1sY-3a-3ik"/>
                                 </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mi5-Fa-nbm">
+                                <rect key="frame" x="8" y="543" width="584" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="l6k-cM-Qqp"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="XOP-5G-cd7" secondAttribute="trailing" constant="-16" id="0Me-Kn-oTd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="mi5-Fa-nbm" secondAttribute="bottom" constant="20" id="BD6-VW-Nau"/>
+                            <constraint firstItem="mi5-Fa-nbm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-8" id="Bgc-oc-P2I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mi5-Fa-nbm" secondAttribute="trailing" constant="-8" id="JGe-94-9dy"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XOP-5G-cd7" secondAttribute="bottom" id="Mgu-E9-kzG"/>
                             <constraint firstItem="XOP-5G-cd7" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Ru3-cZ-NN9"/>
                             <constraint firstItem="XOP-5G-cd7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ufv-m8-9UI"/>
@@ -68,6 +78,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Sew-6T-DwF"/>
                     <connections>
+                        <outlet property="pageControl" destination="mi5-Fa-nbm" id="UmF-Wf-VLf"/>
                         <outlet property="redHeight" destination="K1h-eC-8nd" id="VNt-gO-keT"/>
                         <outlet property="redWidth" destination="Y6R-Em-cdH" id="TOh-aO-pmv"/>
                         <outlet property="scrollView" destination="XOP-5G-cd7" id="Xmv-9V-QlJ"/>
