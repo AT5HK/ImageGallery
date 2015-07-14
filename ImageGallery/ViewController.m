@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 @property (nonatomic) CGSize scrollViewSize;
+@property (nonatomic) UIImage *storeImage;
 @end
 
 @implementation ViewController
@@ -29,6 +31,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"DetailViewController"]) {
+        DetailViewController *detailViewController = segue.destinationViewController;
+        detailViewController.imageHolder = self.storeImage;
+    }
+}
+
+- (IBAction)showDetailView:(id)sender {
+    UITapGestureRecognizer *tap = sender;
+    CGPoint point = [tap locationInView:self.scrollView];
+    NSLog(@"df");
+    for (UIView *view in self.scrollView.subviews)
+    {
+        if ([view isKindOfClass:[UIImageView class]] && CGRectContainsPoint(view.frame, point))
+        {
+            UIImageView *imageView = (UIImageView*)view;
+            self.storeImage = imageView.image;
+            [self performSegueWithIdentifier:@"DetailViewController" sender:nil];
+        }
+    }
+}
 
 
 

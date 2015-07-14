@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gq4-ji-fdn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -20,7 +20,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOP-5G-cd7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-in-Field" translatesAutoresizingMaskIntoConstraints="NO" id="Yhs-HY-hfd" userLabel="Red">
+                                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-in-Field" translatesAutoresizingMaskIntoConstraints="NO" id="Yhs-HY-hfd" userLabel="Red">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -28,15 +28,16 @@
                                             <constraint firstAttribute="width" constant="600" id="Y6R-Em-cdH"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-night" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-61-gPQ" userLabel="Blue">
+                                    <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-night" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-61-gPQ" userLabel="Blue">
                                         <rect key="frame" x="600" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-zoomed" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-gS-nru" userLabel="Green">
+                                    <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-zoomed" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-gS-nru" userLabel="Green">
                                         <rect key="frame" x="1200" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="Yhs-HY-hfd" firstAttribute="leading" secondItem="XOP-5G-cd7" secondAttribute="leading" id="0sq-3E-9C2"/>
                                     <constraint firstItem="5Pb-gS-nru" firstAttribute="leading" secondItem="pPe-61-gPQ" secondAttribute="trailing" id="26D-My-5Om"/>
@@ -53,6 +54,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="Yo7-Ir-GDu"/>
+                                    <outletCollection property="gestureRecognizers" destination="Dn1-KC-ZSh" appends="YES" id="1sY-3a-3ik"/>
                                 </connections>
                             </scrollView>
                         </subviews>
@@ -64,14 +66,55 @@
                             <constraint firstItem="XOP-5G-cd7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ufv-m8-9UI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Sew-6T-DwF"/>
                     <connections>
                         <outlet property="redHeight" destination="K1h-eC-8nd" id="VNt-gO-keT"/>
                         <outlet property="redWidth" destination="Y6R-Em-cdH" id="TOh-aO-pmv"/>
                         <outlet property="scrollView" destination="XOP-5G-cd7" id="Xmv-9V-QlJ"/>
+                        <segue destination="YPr-a7-NIS" kind="show" identifier="DetailViewController" id="4Ud-mS-qj1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Dn1-KC-ZSh">
+                    <connections>
+                        <action selector="showDetailView:" destination="vXZ-lx-hvc" id="Gtu-n7-wBw"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="mnx-qP-GtQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1058" y="305"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="zIY-Z4-SY5">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="YPr-a7-NIS" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i4k-0d-atq"/>
+                        <viewControllerLayoutGuide type="bottom" id="4gG-O1-lNd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dj2-2B-cxf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ii-eR-qIu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1Ii-eR-qIu" firstAttribute="top" secondItem="Dj2-2B-cxf" secondAttribute="topMargin" id="JrX-92-syk"/>
+                            <constraint firstItem="4gG-O1-lNd" firstAttribute="top" secondItem="1Ii-eR-qIu" secondAttribute="bottom" id="S1W-AU-8Zw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Ii-eR-qIu" secondAttribute="trailing" constant="-16" id="j2V-lE-rRA"/>
+                            <constraint firstItem="1Ii-eR-qIu" firstAttribute="leading" secondItem="Dj2-2B-cxf" secondAttribute="leadingMargin" constant="-16" id="xbm-8H-jEQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DetailImage" destination="1Ii-eR-qIu" id="bww-pt-wms"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0u-Fy-twX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="305"/>
         </scene>
         <!--View Controller Next-->
         <scene sceneID="puj-bc-4uW">
@@ -120,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tag-TJ-cUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="305"/>
+            <point key="canvasLocation" x="245" y="-353"/>
         </scene>
     </scenes>
     <resources>
